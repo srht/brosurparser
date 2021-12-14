@@ -26,16 +26,19 @@ class SokParser:
             image.save(static.appPath+'img/bros-img/sok/haftanin-firsatlari/'+str(i)+'.jpg')
             haftaText=ocr.read(static.appPath+'img/bros-img/sok/haftanin-firsatlari/'+str(i)+'.jpg')
             openedImage= Image.open(static.appPath+'img/bros-img/sok/haftanin-firsatlari/'+str(i)+'.jpg')
-            openedImage.thumbnail([810,810])
+            openedImage.thumbnail(size=[1010,1010])
+            openedImage.save(static.appPath+'img/bros-img/sok/haftanin-firsatlari/'+str(i)+'.jpg')
+            openedImage.thumbnail(size=[810,810])
             openedImage.save(static.appPath+'img/bros-img/sok/haftanin-firsatlari/'+str(i)+'thumb.jpg')
-
         
         images = convert_from_path('temp/haftaSonu.pdf', poppler_path='C:\\Program Files\\poppler\\Library\\bin')
         for i, image in enumerate(images, start=1):
             image.save(static.appPath+'img/bros-img/sok/haftasonu-firsatlari/'+str(i)+'.jpg')
             haftaSonuText=ocr.read(static.appPath+'img/bros-img/sok/haftasonu-firsatlari/'+str(i)+'.jpg')
             openedImage= Image.open(static.appPath+'img/bros-img/sok/haftasonu-firsatlari/'+str(i)+'.jpg')
-            openedImage.thumbnail([810,810])
+            openedImage.thumbnail(size=[1010,1010])
+            openedImage.save(static.appPath+'img/bros-img/sok/haftasonu-firsatlari/'+str(i)+'.jpg')
+            openedImage.thumbnail(size=[810,810])
             openedImage.save(static.appPath+'img/bros-img/sok/haftasonu-firsatlari/'+str(i)+'thumb.jpg')
 
         return { 
